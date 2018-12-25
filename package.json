@@ -1,0 +1,28 @@
+{
+  "name": "hikaru-generator-sitemap",
+  "version": "1.0.0",
+  "description": "Sitemap generator plugin for Hikaru.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlynxZhou/hikaru-generator-sitemap.git"
+  },
+  "keywords": [
+    "Hikaru",
+    "Plugin",
+    "Generator",
+    "Sitemap"
+  ],
+  "author": "AlynxZhou <alynx.zhou@gmail.com> (https://alynx.xyz/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/AlynxZhou/hikaru-generator-sitemap/issues"
+  },
+  "homepage": "https://github.com/AlynxZhou/hikaru-generator-sitemap#readme",
+  "dependencies": {
+    "nunjucks": "^3.1.6"
+  }
+}
