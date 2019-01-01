@@ -3,8 +3,8 @@
   {% for post in posts %}
   <url>
     <loc>{{ getURL(post.docPath) }}</loc>
-    {% if post.date %}
-    <lastmod>{{ post.date.toISOString() }}</lastmod>
+    {% if post["updatedTime"] %}
+    <lastmod>{{ post["updatedTime"].toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endfor %}
