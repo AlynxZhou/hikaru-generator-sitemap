@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 module.exports = (hikaru) => {
   const {getURLFn, getPathFn} = hikaru.utils
   const {File} = hikaru.types
-  hikaru.generator.register('afterProcessing', (site) => {
+  hikaru.generator.register('sitemap', (site) => {
     if (!site['siteConfig']['sitemap']['enable']) {
       return site
     }
