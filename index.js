@@ -10,14 +10,14 @@ module.exports = (hikaru) => {
     }
     const tmpContent = fs.readFileSync(path.join(__dirname, 'sitemap.njk'), 'utf8')
     const content = nunjucks.renderString(tmpContent, {
-      "posts": site["posts"],
-      "getURL": getURLFn(site["siteConfig"]["baseURL"], site["siteConfig"]["rootDir"]),
-      "getPath": getPathFn(site["siteConfig"]["rootDir"])
+      'posts': site['posts'],
+      'getURL': getURLFn(site['siteConfig']['baseURL'], site['siteConfig']['rootDir']),
+      'getPath': getPathFn(site['siteConfig']['rootDir'])
     })
-    const file = new File(site['siteConfig']['docDir'])
-    file["docPath"] = site["siteConfig"]["sitemap"]["path"] || "sitemap.xml"
-    file['content'] = content
-    site.put('files', file)
-    return site
+    return new File({
+      'docDir': site['siteConfig']['docDir'],
+      'docPath': site['siteConfig']['sitemap']['path'] || 'sitemap.xml',
+      'content': content
+    })
   })
 }
