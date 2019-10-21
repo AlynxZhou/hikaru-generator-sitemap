@@ -6,7 +6,7 @@ module.exports = (hikaru) => {
   const {File} = hikaru.types
   hikaru.generator.register('sitemap', (site) => {
     if (!site['siteConfig']['sitemap']['enable']) {
-      return site
+      return
     }
     const tmpContent = fs.readFileSync(path.join(__dirname, 'sitemap.njk'), 'utf8')
     const content = nunjucks.renderString(tmpContent, {
