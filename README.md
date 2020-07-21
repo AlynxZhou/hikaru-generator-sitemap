@@ -19,3 +19,5 @@ then run this command to install it.
 ```
 $ npm i -s hikaru-generator-sitemap
 ```
+
+If you want to skip some posts while generating, add `sitemap: false` to its front-matter.

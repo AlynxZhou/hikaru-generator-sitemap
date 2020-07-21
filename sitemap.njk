@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
+  {% if post.sitemap !== false %}
   <url>
     <loc>{{ getURL(post.docPath) }}</loc>
     {% if post.updatedDate %}
     <lastmod>{{ post.updatedDate.toISOString() }}</lastmod>
     {% endif %}
   </url>
+  {% endif %}
   {% endfor %}
   {% for page in site.pages %}
-   <url>
-     <loc>{{ getURL(page.docPath) }}</loc>
-     {% if page.updatedDate %}
-     <lastmod>{{ page.updatedDate.toISOString() }}</lastmod>
-     {% endif %}
-   </url>
-   {% endfor %}
-   {% for file in site.files %}
-    <url>
-      <loc>{{ getURL(file.docPath) }}</loc>
-      {% if file.updatedDate %}
-      <lastmod>{{ file.updatedDate.toISOString() }}</lastmod>
-      {% endif %}
-    </url>
-    {% endfor %}
+  {% if page.sitemap !== false %}
+  <url>
+    <loc>{{ getURL(page.docPath) }}</loc>
+    {% if page.updatedDate %}
+    <lastmod>{{ page.updatedDate.toISOString() }}</lastmod>
+    {% endif %}
+  </url>
+  {% endif %}
+  {% endfor %}
+  {% for file in site.files %}
+  {% if file.sitemap !== false %}
+  <url>
+    <loc>{{ getURL(file.docPath) }}</loc>
+    {% if file.updatedDate %}
+    <lastmod>{{ file.updatedDate.toISOString() }}</lastmod>
+    {% endif %}
+  </url>
+  {% endif %}
+  {% endfor %}
 </urlset>
