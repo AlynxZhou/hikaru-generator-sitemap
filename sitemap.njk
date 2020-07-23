@@ -4,8 +4,8 @@
   {% if post.sitemap !== false %}
   <url>
     <loc>{{ getURL(post.docPath) }}</loc>
-    {% if post.updatedDate %}
-    <lastmod>{{ post.updatedDate.toISOString() }}</lastmod>
+    {% if post.createdDate %}
+    <lastmod>{{ post.createdDate.toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endif %}
@@ -14,8 +14,8 @@
   {% if page.sitemap !== false %}
   <url>
     <loc>{{ getURL(page.docPath) }}</loc>
-    {% if page.updatedDate %}
-    <lastmod>{{ page.updatedDate.toISOString() }}</lastmod>
+    {% if page.createdDate %}
+    <lastmod>{{ page.createdDate.toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endif %}
@@ -24,8 +24,8 @@
   {% if file.sitemap !== false %}
   <url>
     <loc>{{ getURL(file.docPath) }}</loc>
-    {% if file.updatedDate %}
-    <lastmod>{{ file.updatedDate.toISOString() }}</lastmod>
+    {% if file.createdDate %}
+    <lastmod>{{ file.createdDate.toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endif %}
