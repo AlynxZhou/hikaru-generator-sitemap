@@ -1,4 +1,5 @@
 const path = require('path')
+
 module.exports = (hikaru) => {
   const {File} = hikaru.types
   hikaru.decorator.register('sitemap', path.join(__dirname, 'sitemap.njk'))
