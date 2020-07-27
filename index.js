@@ -1,8 +1,9 @@
 const path = require('path')
 
-module.exports = (hikaru) => {
+module.exports = async (hikaru) => {
   const {File} = hikaru.types
-  hikaru.decorator.register('sitemap', path.join(__dirname, 'sitemap.njk'))
+  const fn = await hikaru.compiler.compile(path.join(__dirname, 'sitemap.njk'))
+  hikaru.decorator.register('sitemap', fn)
   hikaru.generator.register('sitemap', (site) => {
     if (!site['siteConfig']['sitemap']['enable']) {
       return
