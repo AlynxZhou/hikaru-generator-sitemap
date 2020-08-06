@@ -4,7 +4,7 @@
   "description": "Sitemap generator plugin for Hikaru.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standardx"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/AlynxZhou/hikaru-generator-sitemap/issues"
   },
-  "homepage": "https://github.com/AlynxZhou/hikaru-generator-sitemap#readme"
+  "homepage": "https://github.com/AlynxZhou/hikaru-generator-sitemap#readme",
+  "devDependencies": {
+    "standardx": "^5.0.0"
+  }
 }
