@@ -4,10 +4,10 @@
   {% if post.sitemap !== false %}
   <url>
     <loc>{{ getURL(post.docPath) }}</loc>
-    {% if post.updatedDate %}
-    <lastmod>{{ post.updatedDate.toISOString() }}</lastmod>
-    {% elif post.createdDate %}
-    <lastmod>{{ post.createdDate.toISOString() }}</lastmod>
+    {% if post.updated %}
+    <lastmod>{{ post.updated.toISOString() }}</lastmod>
+    {% elif post.created %}
+    <lastmod>{{ post.created.toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endif %}
@@ -16,10 +16,10 @@
   {% if page.sitemap !== false %}
   <url>
     <loc>{{ getURL(page.docPath) }}</loc>
-    {% if page.updatedDate %}
-    <lastmod>{{ page.updatedDate.toISOString() }}</lastmod>
-    {% elif page.createdDate %}
-    <lastmod>{{ page.createdDate.toISOString() }}</lastmod>
+    {% if page.updated %}
+    <lastmod>{{ page.updated.toISOString() }}</lastmod>
+    {% elif page.created %}
+    <lastmod>{{ page.created.toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endif %}
@@ -28,10 +28,10 @@
   {% if file.sitemap !== false %}
   <url>
     <loc>{{ getURL(file.docPath) }}</loc>
-    {% if file.updatedDate %}
-    <lastmod>{{ file.updatedDate.toISOString() }}</lastmod>
-    {% elif file.createdDate %}
-    <lastmod>{{ file.createdDate.toISOString() }}</lastmod>
+    {% if file.updated %}
+    <lastmod>{{ file.updated.toISOString() }}</lastmod>
+    {% elif file.created %}
+    <lastmod>{{ file.created.toISOString() }}</lastmod>
     {% endif %}
   </url>
   {% endif %}
