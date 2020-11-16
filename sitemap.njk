@@ -6,7 +6,7 @@
     <loc>{{ getURL(post.docPath) }}</loc>
     {% if post.updated %}
     <lastmod>{{ post.updated.toISOString() }}</lastmod>
-    {% elif post.created %}
+    {% elseif post.created %}
     <lastmod>{{ post.created.toISOString() }}</lastmod>
     {% endif %}
   </url>
@@ -18,7 +18,7 @@
     <loc>{{ getURL(page.docPath) }}</loc>
     {% if page.updated %}
     <lastmod>{{ page.updated.toISOString() }}</lastmod>
-    {% elif page.created %}
+    {% elseif page.created %}
     <lastmod>{{ page.created.toISOString() }}</lastmod>
     {% endif %}
   </url>
@@ -30,7 +30,7 @@
     <loc>{{ getURL(file.docPath) }}</loc>
     {% if file.updated %}
     <lastmod>{{ file.updated.toISOString() }}</lastmod>
-    {% elif file.created %}
+    {% elseif file.created %}
     <lastmod>{{ file.created.toISOString() }}</lastmod>
     {% endif %}
   </url>
