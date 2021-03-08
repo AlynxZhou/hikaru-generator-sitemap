@@ -6,7 +6,7 @@ Sitemap generator plugin for Hikaru.
 
 # Usage
 
-First go to your site dir and add following to your `config.yml`.
+First go to your site dir and add following to your `site-config.yaml`.
 
 ```yaml
 sitemap:
