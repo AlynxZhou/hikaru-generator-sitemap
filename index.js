@@ -1,3 +1,4 @@
+const fs = require("fs/promises");
 const path = require("path");
 
 module.exports = async (hikaru) => {
@@ -5,8 +6,12 @@ module.exports = async (hikaru) => {
     return;
   }
   const {File} = hikaru.types;
-  const fn = await hikaru.compiler.compile(path.join(__dirname, "sitemap.njk"));
-  hikaru.decorator.register("sitemap", fn);
+  const filepath = path.join(__dirname, "sitemap.njk");
+  const content = await fs.readFile(filepath, "utf8");
+  const fn = await hikaru.compiler.compile(filepath, content);
+  hikaru.decorator.register("sitemap", fn, {
+    "dirname": __dirname, "pathSep": path.sep
+  });
   hikaru.generator.register("sitemap", (site) => {
     return new File({
       "docDir": site["siteConfig"]["docDir"],
