@@ -1,6 +1,6 @@
 {
   "name": "hikaru-generator-sitemap",
-  "version": "2.2.13",
+  "version": "2.3.0",
   "description": "Sitemap generator plugin for Hikaru.",
   "type": "module",
   "exports": "./index.js",
