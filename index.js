@@ -13,9 +13,7 @@ const generateSitemap = async (hikaru) => {
   const fn = await hikaru.compiler.compile(filepath, content);
   hikaru.decorator.register("sitemap", fn);
   hikaru.helper.register("sitemap context", (site, file) => {
-    return {
-      "dirname": pluginDir, "pathSep": path.sep
-    };
+    return {"dirname": pluginDir, "pathSep": path.sep};
   }, "sitemap");
   hikaru.generator.register("sitemap", (site) => {
     return new File({
